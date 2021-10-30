@@ -4,7 +4,6 @@ module.exports = {
   theme: {
     extend: {
       gridTemplateColumns: {
-        // Simple 16 column grid
         'main': '2fr 1fr',
   },
   colors: {
