@@ -16,8 +16,12 @@ module.exports = {
     'body': [ 'Manrope', 'sans-serif'],
    },
    width: {
-    'body':'60%'
+    'body':'60%',
+    'svg':'64px'
    },
+   'top-19': {
+    top: '-4rem',
+  },
   variants: {
     extend: {},
   },
