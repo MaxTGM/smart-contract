@@ -14,7 +14,7 @@
               <div class="relative flex items-center justify-between h-16">
                 <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
                   <!-- Mobile menu button-->
-                  <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                  <button type="button" class="mobile-menu-button inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
                     <span class="sr-only">Open main menu</span>
                     <!--
                       Icon when menu is closed.
@@ -79,7 +79,7 @@
                         From: "transform opacity-100 scale-100"
                         To: "transform opacity-0 scale-95"
                     -->
-                    <div class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
+                    <div class="hidden dropdown origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
                       <!-- Active: "bg-gray-100", Not Active: "" -->
                       <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-0">Your Profile</a>
                       <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-1">Settings</a>
@@ -91,7 +91,7 @@
             </div>
           
             <!-- Mobile menu, show/hide based on menu state. -->
-            <div class="sm:hidden" id="mobile-menu">
+            <div class="hidden mobile-menu" id="mobile-menu">
               <div class="px-2 pt-2 pb-3 space-y-1">
                 <!-- Current: "bg-gray-9bltext-blackwhite", Deblbg-blue-500text-gray-300 hover:bg-gray-700 hover:text-white" -->
                 <a href="#" class="text-black hover:bg-blue-500 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Hire</a>
@@ -105,7 +105,7 @@
             <section class="h-screen bg-yellow-50 ">
                 <div class="sm:grid sm:grid-rows-2 md:grid-cols-9 md:grid-rows-1 bg-yellow-50 justify-center items-center h-screen mx-6 gap-4">
 
-                    <img class="sm:row-start-1  md:col-span-4 md:col-start-6 md:pr-9" src="images/hero.png" alt="">
+                    <img class="sm:row-start-1  md:col-span-6 md:col-start-5" src="images/hero.png" alt="">
 
                     <div class="md:col-start-2 col-span-3 flex justify-center flex-col gap-8">
                         <h1 class="font-bold text-6xl md:text-5xl text-center md:text-left lg:text-6xl">Smart Passport <br>for all</h1> 
@@ -125,5 +125,31 @@
 
             </section>
         </main>
+        
+
+        <style>
+          body.swal2-shown > [aria-hidden="true"] {
+          transition: 0.1s filter;
+          filter: blur(10px);
+          }
+        </style>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script>
+          const btn = document.querySelector("button.mobile-menu-button");
+          const menu = document.querySelector(".mobile-menu");
+        
+          const btn2 = document.querySelector("button#user-menu-button");
+          const menu2 = document.querySelector(".dropdown");
+
+          btn.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+          });
+          btn2.addEventListener("click", () => {
+            menu2.classList.toggle("hidden");
+          }); 
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>

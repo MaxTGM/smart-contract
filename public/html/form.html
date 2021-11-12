@@ -11,85 +11,100 @@
     <title>Form</title>
 </head>
 <body>
-<main class="grid items-center justify-center max-h-full md:bg-primary font-body">
-  <form class="w-11/12 max-w-lg m-2 md:bg-white md:px-10 md:py-2 md:border-2 md:border-white rounded-lg">
-  <h1 class="text-6xl font-bold mb-6 text-center">Create a Profile!</h1>
-    <div class="flex flex-wrap -mx-3 mb-6">
-      <div class="w-full md:w-full px-3 mb-6 md:mb-0">
-        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
-          First Name
-        </label>
-        <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="Joe">
-        <p class="text-red-500 text-xs italic">Please fill out this field.</p>
-      </div>
-    </div>
-    <div class="flex flex-wrap -mx-3 mb-2">
-      <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-city">
-          Country
-        </label>
-        <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" placeholder="">
-      </div>
-      <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
-          Birth Date
-        </label>
-        <input type="date" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="Smith">
-        <div class="relative">
+<main class="grid items-center justify-center max-h-full md:bg-yellow-100 font-body">
+
+  <div class="selection:bg-yellow-500 selection:text-white">
+    <div class="min-h-screen bg-yellow-100 flex justify-center items-center">
+      <div class="p-8 flex-1">
+        <div class="w-100 bg-white rounded-3xl mx-auto overflow-hidden shadow-xl">
+          <div class="relative h-48 bg-yellow-500 rounded-bl-4xl">
+            <svg class="absolute bottom-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 318">
+              <path fill="#ffffff" fill-opacity="1" d="M0,64L48,80C96,96,192,128,288,128C384,128,480,96,576,85.3C672,75,768,85,864,122.7C960,160,1056,224,1152,245.3C1248,267,1344,245,1392,234.7L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+          </div>
+          <form class="w-11/12 max-w-lg m-2 md:bg-white md:px-10 md:py-2 md:border-2 md:border-white rounded-lg grid justify-center items-center">
+          <h1 class="text-6xl font-bold mb-6 text-center">Create a Profile!</h1>
+            <div class="flex flex-wrap -mx-3 mb-6">
+              <div class="w-full md:w-full px-3 mb-6 md:mb-0">
+                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
+                  First Name
+                </label>
+                <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="Joe">
+                <p class="text-red-500 text-xs italic">Please fill out this field.</p>
+              </div>
+            </div>
+            <div class="flex flex-wrap -mx-3 mb-2">
+              <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-city">
+                  Country
+                </label>
+                <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" placeholder="">
+              </div>
+              <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
+                  Birth Date
+                </label>
+                <input type="date" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="Smith">
+                <div class="relative">
+                </div>
+              </div>
+            </div>
+            <div class="mt-4 mb-4">
+              <span class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">Account Type</span>
+              <div class="mt-2">
+                <label class="inline-flex items-center">
+                  <input type="radio" class="form-radio" name="accountType" value="personal">
+                  <span class="ml-2">Worker</span>
+                </label>
+                <label class="inline-flex items-center ml-6">
+                  <input type="radio" class="form-radio" name="accountType" value="busines">
+                  <span class="ml-2">Professional</span>
+                </label>
+              </div>
+            </div>
+            <div class="flex flex-wrap -mx-3 mb-2">
+              <div class="w-full md:w-full px-3 mb-6 md:mb-0">
+                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-city">
+                  Company
+                </label>
+                <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" placeholder="">
+              </div>
+            </div>
+            <div class="w-full mb-6 md:mb-4">
+              <label for="about" class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
+                About
+              </label>
+              <div class="mt-1">
+                <textarea id="about" name="about" rows="3" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md" placeholder="Brief description for your profile. URLs are hyperlinked."></textarea>
+              </div>
+            </div>
+            <div class="w-full mb-6 md:mb-4">
+              <label for="about" class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
+                Skills
+              </label>
+              <div class="mt-1">
+                <textarea id="about" name="about" rows="3" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md" placeholder="What can you do?"></textarea>
+              </div>
+            </div>
+            <div class="w-full mb-6 md:mb-4">
+              <label for="Languages" class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
+                Languages
+              </label>
+              <div class="mt-1">
+                <textarea id="Languages" name="Languages" rows="3" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md" placeholder="What can you do?"></textarea>
+              </div>
+            </div>
+            <div class="text-right sm:px-6 flex justify-center">
+              <button type="submit" class="inline-flex justify-center mt-4 mb-4 px-4 py-2 rounded bg-yellow-500 hover:bg-yellow-400 text-white font-semibold text-center w-full focus:outline-none focus:ring focus:ring-offset-2 focus:ring-yellow-500 focus:ring-opacity-80 cursor-pointer">
+                Save
+              </button>
+            </div>
+          </form>   
+        
         </div>
       </div>
     </div>
-    <div class="mt-4 mb-4">
-      <span class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">Account Type</span>
-      <div class="mt-2">
-        <label class="inline-flex items-center">
-          <input type="radio" class="form-radio" name="accountType" value="personal">
-          <span class="ml-2">Worker</span>
-        </label>
-        <label class="inline-flex items-center ml-6">
-          <input type="radio" class="form-radio" name="accountType" value="busines">
-          <span class="ml-2">Professional</span>
-        </label>
-      </div>
-    </div>
-    <div class="flex flex-wrap -mx-3 mb-2">
-      <div class="w-full md:w-full px-3 mb-6 md:mb-0">
-        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-city">
-          Company
-        </label>
-        <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" placeholder="">
-      </div>
-    </div>
-    <div class="w-full mb-6 md:mb-4">
-      <label for="about" class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
-        About
-      </label>
-      <div class="mt-1">
-        <textarea id="about" name="about" rows="3" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md" placeholder="Brief description for your profile. URLs are hyperlinked."></textarea>
-      </div>
-    </div>
-    <div class="w-full mb-6 md:mb-4">
-      <label for="about" class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
-        Skills
-      </label>
-      <div class="mt-1">
-        <textarea id="about" name="about" rows="3" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md" placeholder="What can you do?"></textarea>
-      </div>
-    </div>
-    <div class="w-full mb-6 md:mb-4">
-      <label for="Languages" class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
-        Languages
-      </label>
-      <div class="mt-1">
-        <textarea id="Languages" name="Languages" rows="3" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md" placeholder="What can you do?"></textarea>
-      </div>
-    </div>
-    <div class="text-right sm:px-6 flex justify-center">
-      <button type="submit" class="inline-flex justify-center py-1 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-        Save
-      </button>
-    </div>
-  </form>   
+  </div>
 </main> 
 
 </body>

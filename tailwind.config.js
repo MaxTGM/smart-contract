@@ -1,4 +1,8 @@
+const colors = require('tailwindcss/colors')
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
+  mode: 'jit',
   purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
@@ -10,7 +14,9 @@ module.exports = {
     primary:'#56CCF2',
     secondary: '#5a4fcf',
     third:'#F1E4FF',
-    fourth: '#18191F'
+    fourth: '#18191F',
+    rose: 'colors.rose',
+
   },
   fontFamily: {
     'body': [ 'Manrope', 'sans-serif'],
