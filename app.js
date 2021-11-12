@@ -7,7 +7,7 @@ app.use(express.static(path.join(__dirname + '/public')));
 app.use(express.urlencoded({extended:true}));
 
 app.get("/", function(req, res) {
-    res.sendFile(__dirname + "/public/html/index.html");
+    res.sendFile(__dirname + "/public/html/home.html");
 });
 
 app.get("/form", function(req, res) {
