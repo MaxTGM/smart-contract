@@ -1,6 +1,3 @@
-const colors = require('tailwindcss/colors')
-const defaultTheme = require('tailwindcss/defaultTheme')
-
 module.exports = {
   mode: 'jit',
   purge: [],
@@ -15,7 +12,6 @@ module.exports = {
     secondary: '#5a4fcf',
     third:'#F1E4FF',
     fourth: '#18191F',
-    rose: 'colors.rose',
 
   },
   fontFamily: {
