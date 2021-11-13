@@ -18,6 +18,9 @@ app.get("/search", function(req, res) {
     res.sendFile(__dirname + "/public/html/search.html");
 });
 
+app.get("/category", function(req, res) {
+    res.sendFile(__dirname + "/public/html/category.html");
+});
 
 app.get("/dashboard", function(req, res) {
     res.sendFile(__dirname + "/public/html/editprofile.html");
