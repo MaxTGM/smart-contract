@@ -9,7 +9,7 @@
 </head>
 <body>
     <nav>
-        <nav class="md:fixed w-screen">
+        <nav id="nav" class="md:fixed w-screen">
             <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
               <div class="relative flex items-center justify-between h-16">
                 <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -129,6 +129,16 @@
           btn2.addEventListener("click", () => {
             menu2.classList.toggle("hidden");
           }); 
+
+          const navBar = document.querySelector("#nav");
+
+          window.onscroll = function() {
+            if(window.scrollY !== 0) {
+              navBar.classList.add("bg-white");
+            } else {
+              navBar.classList.remove("bg-white");
+            }
+          }
         </script>
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
