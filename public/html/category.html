@@ -99,7 +99,7 @@
             From: "opacity-100"
             To: "opacity-0"
         -->
-        <div class="fixed inset-0 bg-black bg-opacity-25" aria-hidden="true"></div>
+        <div id="bg" class="fixed inset-0 bg-black bg-opacity-25" aria-hidden="true"></div>
   
         <!--
           Off-canvas menu, show/hide based on off-canvas menu state.
@@ -732,6 +732,7 @@
 
     const btn3 = document.querySelector("button.mobile-filter-button");
     const menu3 = document.querySelector(".filter-menu");
+    const bg = document.querySelector("#bg");
 
     const btn4 = document.querySelector("button#menu-button-sort");
     const menu4 = document.querySelector("#sortMenu");
@@ -744,6 +745,8 @@
     }); 
     btn3.addEventListener("click", () => {
       menu3.classList.toggle("hidden");
+      bg.classList.toggle("bg-opacity-25");
+      bg.classList.toggle("bg-opacity-0");
     });
     btn4.addEventListener("click", () => {
       menu4.classList.toggle("hidden");
