@@ -26,6 +26,10 @@ app.get("/dashboard", function(req, res) {
     res.sendFile(__dirname + "/public/html/editprofile.html");
 });
 
+app.get("/woker", function(req, res) {
+    res.sendFile(__dirname + "/public/html/woker.html");
+});
+
 app.listen(process.env.PORT || port, function() {
     console.log(`Server started on http://localhost:${port}`);
 });
