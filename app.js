@@ -14,6 +14,11 @@ app.get("/form", function(req, res) {
     res.sendFile(__dirname + "/public/html/form.html");
 });
 
+app.get("/search", function(req, res) {
+    res.sendFile(__dirname + "/public/html/search.html");
+});
+
+
 app.get("/dashboard", function(req, res) {
     res.sendFile(__dirname + "/public/html/editprofile.html");
 });
