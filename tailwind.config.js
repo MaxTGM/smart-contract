@@ -15,7 +15,7 @@ module.exports = {
 
   },
   fontFamily: {
-    'body': [ 'Manrope', 'sans-serif'],
+    'body': [ 'Poppins', 'sans-serif'],
    },
    width: {
     'body':'60%',
