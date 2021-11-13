@@ -14,6 +14,8 @@ const ethEnabled = async () => {
       alert('Please enable Metamask');
     });
 
+  } else {
+    alert('Please use a Web3 supported browser/extension');
   }
 }
 

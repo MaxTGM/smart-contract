@@ -25,7 +25,7 @@
             </div>
             <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
               <div class="flex-shrink-0 flex items-center">
-                  <h1 class="text-black font-bold ">LOGO.</h1>
+                  <a href="/" class="text-black font-bold ">LOGO.</a>
               </div>
               <div class="hidden sm:block sm:ml-6">
                 <div class="flex space-x-4">
@@ -111,10 +111,10 @@
             From: "translate-x-0"
             To: "translate-x-full"
         -->
-        <div class="ml-auto relative max-w-xs w-full h-full bg-white shadow-xl py-4 pb-12 flex flex-col overflow-y-auto">
+        <div class="ml-auto relative max-w-xs w-full h-full bg-white shadow-xl py-4 pb-12 flex flex-col overflow-y-auto filter-menu">
           <div class="px-4 flex items-center justify-between">
             <h2 class="text-lg font-medium text-gray-900">Filters</h2>
-            <button type="button" class="-mr-2 w-10 h-10 bg-white p-2 rounded-md flex items-center justify-center text-gray-400">
+            <button type="button" class="-mr-2 w-10 h-10 bg-white p-2 rounded-md flex items-center justify-center text-gray-400 mobile-filter-button">
               <span class="sr-only">Close menu</span>
               <!-- Heroicon name: outline/x -->
               <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -386,7 +386,7 @@
           <div class="flex items-center">
             <div class="relative inline-block text-left">
               <div>
-                <button type="button" class="group inline-flex justify-center text-sm font-medium text-gray-700 hover:text-gray-900" id="menu-button" aria-expanded="false" aria-haspopup="true">
+                <button type="button" class="group inline-flex justify-center text-sm font-medium text-gray-700 hover:text-gray-900" id="menu-button-sort" aria-expanded="false" aria-haspopup="true">
                   Sort
                   <!-- Heroicon name: solid/chevron-down -->
                   <svg class="flex-shrink-0 -mr-1 ml-1 h-5 w-5 text-gray-400 group-hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -405,7 +405,7 @@
                   From: "transform opacity-100 scale-100"
                   To: "transform opacity-0 scale-95"
               -->
-              <div class="origin-top-right absolute right-0 mt-2 w-40 rounded-md shadow-2xl bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+              <div id="sortMenu" class="origin-top-right absolute right-0 mt-2 w-40 rounded-md shadow-2xl bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
                 <div class="py-1" role="none">
                   <!--
                     Active: "bg-gray-100", Not Active: ""
@@ -722,6 +722,34 @@
       </main>
     </div>
   </div>
+
+  <script>
+    const btn = document.querySelector("button.mobile-menu-button");
+    const menu = document.querySelector(".mobile-menu");
+  
+    const btn2 = document.querySelector("button#user-menu-button");
+    const menu2 = document.querySelector(".dropdown");
+
+    const btn3 = document.querySelector("button.mobile-filter-button");
+    const menu3 = document.querySelector(".filter-menu");
+
+    const btn4 = document.querySelector("button#menu-button-sort");
+    const menu4 = document.querySelector("#sortMenu");
+
+    btn.addEventListener("click", () => {
+      menu.classList.toggle("hidden");
+    });
+    btn2.addEventListener("click", () => {
+      menu2.classList.toggle("hidden");
+    }); 
+    btn3.addEventListener("click", () => {
+      menu3.classList.toggle("hidden");
+    });
+    btn4.addEventListener("click", () => {
+      menu4.classList.toggle("hidden");
+    });
+
+  </script>
   
 </body>
 </html>
